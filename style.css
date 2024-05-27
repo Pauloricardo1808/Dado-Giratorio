@@ -1,0 +1,57 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+
+.dado {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: spin 2s infinite linear;
+}
+
+.lado {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.lado1 { 
+    transform: rotateY(0deg) translateZ(50px); 
+}
+
+.lado2 { 
+    transform: rotateY(90deg) translateZ(50px); 
+}
+
+.lado3 { 
+    transform: rotateY(180deg) translateZ(50px); 
+}
+
+.lado4 { 
+    transform: rotateY(-90deg) translateZ(50px); 
+}
+
+.lado5 { 
+    transform: rotateX(90deg) translateZ(50px); 
+}
+
+.lado6 { 
+    transform: rotateX(-90deg) translateZ(50px); 
+}
+
+@keyframes spin {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
